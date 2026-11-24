@@ -216,6 +216,9 @@
   .status-final{background:var(--black);color:#fff}
   .status-review{background:#fff;color:var(--black)}
   .status-open{background:var(--red);color:#fff;border-color:var(--red)}
+  .status-pick{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700}
+  .status-select{font-family:inherit;font-size:15px;font-weight:600;min-height:40px;padding:6px 8px;border-radius:8px;border:1px solid var(--black);background:#fff;color:var(--ink);max-width:230px}
+  .test-tag{display:inline-flex;align-items:center;font-size:13px;font-weight:700;padding:3px 9px;border-radius:999px;line-height:1.3;background:var(--red);color:#fff}
   .deliv-body{display:none;border-top:1px solid var(--line);padding:14px 16px 16px 62px;background:var(--surface-2)}
   @media (max-width:560px){.deliv-body{padding-left:16px}}
   .deliv.open .deliv-body{display:block}
@@ -373,7 +376,7 @@
     </div>
     <div class="headline-text">
       <p>Five Of Six Deliverables Built And Ready For Your Review Today. <em>One Connection Left To Close.</em></p>
-      <p class="headline-note">The one gap is the Outstand connection. That is the first item on today&rsquo;s agenda, and it closes in this room.</p>
+      <p class="headline-note">The one gap is the Claude-Outstand connection &mdash; it lets Claude draft captions and read post state. The Sheet&rsquo;s booking script books on its own through Outstand&rsquo;s API. The connection is the first item on today&rsquo;s agenda.</p>
     </div>
   </section>
 
@@ -420,7 +423,7 @@
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
         <div class="agenda-body">
-          <p>Connect the Outstand account so the Content Engine can book approved posts, and clear the old 9:55 sweep from Armand&rsquo;s account. Once this is done, every deliverable is fully live.</p>
+          <p>Reconnect Claude to Outstand so Claude can draft captions and read the state of your posts, and clear the old 9:55 sweep from Armand&rsquo;s account. The Sheet&rsquo;s booking script books through Outstand&rsquo;s API and does not need this connection &mdash; booking does not wait on it. We&rsquo;ll test the Claude connection and the Sheet&rsquo;s booking flow separately, then record what passed on each platform and what remains open.</p>
           <div class="inline-actions">
             <button class="btn btn-ghost" data-jump="deliv-content-engine">View Content Engine
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -442,7 +445,13 @@
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
         <div class="agenda-body">
-          <p>Armand approves the banked rooftop post in the Approval Sheet; the script books it; we verify it live in Outstand and record it as the tutorial.</p>
+          <p>We start with one question: crew sign-off on the rooftop photo. The rooftop slide stays ready as a candidate, but Post 1 is whatever Armand approves first in the Approval Sheet. The script books it, and we record the session as the tutorial.</p>
+          <p style="font-weight:700">The Live Proof Runs As Three Separate Checks, Each One Recorded:</p>
+          <ul class="prove-list">
+            <li><span class="prove-num">A</span><span><strong>The Claude-Outstand Connection</strong> &mdash; Claude connects and reads the three accounts.</span></li>
+            <li><span class="prove-num">B</span><span><strong>Sheet-To-Outstand Booking</strong> &mdash; for Facebook, LinkedIn, and Instagram, we record the scheduled time and the Outstand ID for each network.</span></li>
+            <li><span class="prove-num">C</span><span><strong>Actual Publication</strong> &mdash; we record whether the post actually published on each network.</span></li>
+          </ul>
           <div class="inline-actions">
             <a class="btn btn-primary" href="https://docs.google.com/spreadsheets/d/1w2ls1zeHKxEWzEW7jjNaZr4cRJBSCSSueyEvzM-jCg0/edit" target="_blank" rel="noopener">Open Approval Sheet
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -455,13 +464,13 @@
         <button class="agenda-head" aria-expanded="false">
           <span class="time-badge">11:00<small>Review</small></span>
           <span class="agenda-title-wrap">
-            <span class="agenda-title">Template Walk</span>
-            <span class="agenda-teaser">The First Eight Posts, One At A Time</span>
+            <span class="agenda-title">Template Walk: Ten Designs</span>
+            <span class="agenda-teaser">Ten Designs, One At A Time</span>
           </span>
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
         <div class="agenda-body">
-          <p>We walk the First Eight posts one at a time. Armand edits live; his impressions shape the voice file.</p>
+          <p>We walk the ten template designs one at a time. The designs are not the posts &mdash; the First Eight are the first eight approved posts. Armand edits live; his impressions shape the voice file.</p>
           <div class="inline-actions">
             <a class="btn btn-primary" href="https://docs.google.com/document/d/1oUo0Ij9a4vYTy4tCkpWqbpDKEYuPB_hOd_dufqo08q8/edit" target="_blank" rel="noopener">Open First Eight Posts
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -497,16 +506,20 @@
           <span class="time-badge">11:45<small>Decisions</small></span>
           <span class="agenda-title-wrap">
             <span class="agenda-title">Room Questions</span>
-            <span class="agenda-teaser">Four Quick Sign-Offs From The Crew</span>
+            <span class="agenda-teaser">Eight Quick Sign-Offs To Settle In The Room</span>
           </span>
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
         <div class="agenda-body">
           <ul class="q-list">
-            <li><span class="q-dot"></span><span>Crew sign-off on the rooftop photo</span></li>
             <li><span class="q-dot"></span><span>CSLB license number on posts</span></li>
             <li><span class="q-dot"></span><span>Armand as approver</span></li>
-            <li><span class="q-dot"></span><span>Crew photo owner</span></li>
+            <li><span class="q-dot"></span><span>Crew Photo Owner: Name One Owner, Set A 2-Minute Friday Upload, And Add A Crew OK Tick At Upload So Sign-Off For Anyone In The Shot Happens At Intake</span></li>
+            <li><span class="q-dot"></span><span>No color grade at launch &mdash; photos publish as they were shot</span></li>
+            <li><span class="q-dot"></span><span>The operator seat: the project, the script, and the sweeps run on the operator&rsquo;s Air Craft seat &mdash; who holds that seat long-term?</span></li>
+            <li><span class="q-dot"></span><span>Today&rsquo;s Tuesday 9 AM Facebook slot has already passed, so a post booked today rolls to next Tuesday at 9 AM</span></li>
+            <li><span class="q-dot"></span><span>Armand writing or editing captions himself &mdash; the Approve Edited decision covers it</span></li>
+            <li><span class="q-dot"></span><span>Dark Plate stays out</span></li>
           </ul>
         </div>
       </article>
@@ -521,7 +534,7 @@
           <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
         </button>
         <div class="agenda-body">
-          <p>We finish on the acceptance document in PandaDoc &mdash; it mirrors the Deliverables checklist item for item, so Armand ticks each deliverable off here and signs there. Balance of $450 due at sign-off, Wednesday Nov 25, end of day.</p>
+          <p>We finish on the paper acceptance &mdash; signed on paper at Wednesday&rsquo;s sign-off. It mirrors the Deliverables checklist item for item, so Armand ticks each deliverable off here and signs on paper there. Balance of $450 due at sign-off, Wednesday Nov 25, end of day.</p>
           <div class="inline-actions">
             <button class="btn btn-dark" data-jump="signoff">Go To Sign-Off
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -589,7 +602,7 @@
             <h3 class="built-title">First Eight Posts</h3>
             <span class="built-tag">Built</span>
           </div>
-          <p class="built-desc"><strong>10 finished templates across 5 buckets.</strong> Each one is a real Canva file with a humanized caption, ready to approve and book.</p>
+          <p class="built-desc">The first eight approved posts. <strong>Ten template designs across 5 buckets</strong> support them &mdash; each design is a real Canva file with a humanized caption, ready to approve and book.</p>
         </div>
       </article>
 
@@ -600,7 +613,7 @@
             <h3 class="built-title">Approval Gate</h3>
             <span class="built-tag">Built</span>
           </div>
-          <p class="built-desc">The Approval Sheet plus the booking script. Armand approves in the Sheet, the script books the post. <strong>Test green.</strong></p>
+          <p class="built-desc">The Approval Sheet plus the booking script. Armand approves in the Sheet, the script books the post. <strong>Test Green &mdash; this morning&rsquo;s test passed 9 of 9 checks: booking proven, publishing to be proven today.</strong></p>
         </div>
       </article>
 
@@ -626,8 +639,8 @@
     </div>
 
     <div class="review-bar" aria-live="polite">
-      <div class="count"><strong id="reviewedCount">0</strong> Of 6 Reviewed In This Room</div>
-      <div class="note">Tick Each One Off As We Review It</div>
+      <div class="count"><strong id="reviewedCount">0</strong> Of 6 Reviewed In Meeting</div>
+      <div class="note">Tick Each One Off As We Review It, Then Set Its Status Below</div>
     </div>
 
     <div class="deliv-list">
@@ -643,7 +656,14 @@
           <div class="deliv-title-wrap">
             <h3 class="deliv-title">Voice File</h3>
           </div>
-          <span class="status status-final">Status: Final</span>
+          <label class="status-pick">Status
+            <select class="status-select" aria-label="Voice File Status">
+              <option value="">Choose In Meeting</option>
+              <option>Accepted</option>
+              <option>Open With Owner And Date</option>
+              <option>Deferred By Agreement</option>
+            </select>
+          </label>
         </div>
         <div class="compare">
           <div class="compare-col">
@@ -674,7 +694,14 @@
           <div class="deliv-title-wrap">
             <h3 class="deliv-title">Content Engine</h3>
           </div>
-          <span class="status status-open">Status: Built, Connection To Close</span>
+          <label class="status-pick">Status
+            <select class="status-select" aria-label="Content Engine Status">
+              <option value="">Choose In Meeting</option>
+              <option>Accepted</option>
+              <option>Open With Owner And Date</option>
+              <option>Deferred By Agreement</option>
+            </select>
+          </label>
         </div>
         <div class="compare">
           <div class="compare-col">
@@ -708,7 +735,14 @@
           <div class="deliv-title-wrap">
             <h3 class="deliv-title">Photo Drop</h3>
           </div>
-          <span class="status status-final">Status: Final</span>
+          <label class="status-pick">Status
+            <select class="status-select" aria-label="Photo Drop Status">
+              <option value="">Choose In Meeting</option>
+              <option>Accepted</option>
+              <option>Open With Owner And Date</option>
+              <option>Deferred By Agreement</option>
+            </select>
+          </label>
         </div>
         <div class="compare">
           <div class="compare-col">
@@ -739,17 +773,24 @@
           <div class="deliv-title-wrap">
             <h3 class="deliv-title">First Eight Posts</h3>
           </div>
-          <span class="status status-review">Status: Ready For Your Review</span>
+          <label class="status-pick">Status
+            <select class="status-select" aria-label="First Eight Posts Status">
+              <option value="">Choose In Meeting</option>
+              <option>Accepted</option>
+              <option>Open With Owner And Date</option>
+              <option>Deferred By Agreement</option>
+            </select>
+          </label>
         </div>
         <div class="compare">
           <div class="compare-col">
             <p class="col-label">The Contract Asks</p>
-            <p>Six finished posts.</p>
+            <p>Eight finished posts &mdash; the First Eight.</p>
           </div>
           <div class="compare-col built-col">
             <p class="col-label">What We Built</p>
-            <p>Ten finished templates across five buckets, each a real Canva file in Armand&rsquo;s team with a humanized caption &mdash; eight posts ready from a six-post contract.</p>
-            <p class="beyond">Beyond The Contract: Ten templates and eight posts where six were promised.</p>
+            <p>Ten template designs across five buckets, each a real Canva file in Armand&rsquo;s team with a humanized caption. The First Eight are the first eight approved posts, produced from these designs.</p>
+            <p class="beyond">Beyond The Contract: Ten template designs ready to produce the First Eight posts.</p>
           </div>
         </div>
         <div class="open-items"><strong>Two Open Items Inside:</strong> The Equipment A photo redo and the Rooftop B crew sign-off.</div>
@@ -773,8 +814,16 @@
           <span class="deliv-num">5</span>
           <div class="deliv-title-wrap">
             <h3 class="deliv-title">Approval Gate</h3>
+            <span class="test-tag">Test Green</span>
           </div>
-          <span class="status status-final">Status: Final, Test Green</span>
+          <label class="status-pick">Status
+            <select class="status-select" aria-label="Approval Gate Status">
+              <option value="">Choose In Meeting</option>
+              <option>Accepted</option>
+              <option>Open With Owner And Date</option>
+              <option>Deferred By Agreement</option>
+            </select>
+          </label>
         </div>
         <div class="compare">
           <div class="compare-col">
@@ -784,6 +833,7 @@
           <div class="compare-col built-col">
             <p class="col-label">What We Built</p>
             <p>The Approval Sheet (one row per photo, thumbnail preview, one-tap Decision dropdown, notes column) plus the booking script that posts approved items automatically &mdash; with the folder move still underneath.</p>
+            <p style="margin-top:8px"><strong>Test Green:</strong> this morning&rsquo;s test passed 9 of 9 checks &mdash; booking proven; publishing is proven today.</p>
             <p class="beyond">Beyond The Contract: One-tap approvals with previews and automatic booking, not just a folder move.</p>
           </div>
         </div>
@@ -805,7 +855,14 @@
           <div class="deliv-title-wrap">
             <h3 class="deliv-title">Training And The Keys</h3>
           </div>
-          <span class="status status-review">Status: Ready For Your Review</span>
+          <label class="status-pick">Status
+            <select class="status-select" aria-label="Training And The Keys Status">
+              <option value="">Choose In Meeting</option>
+              <option>Accepted</option>
+              <option>Open With Owner And Date</option>
+              <option>Deferred By Agreement</option>
+            </select>
+          </label>
         </div>
         <div class="compare">
           <div class="compare-col">
@@ -828,9 +885,9 @@
     </div>
 
     <section class="signoff" id="signoff">
-      <h3>Final Step: <span>Sign-Off On PandaDoc</span></h3>
-      <p>Once every item above is checked, sign the acceptance document &mdash; it mirrors this checklist item for item.</p>
-      <div><span class="due">Balance Of $450 Due At Sign-Off &middot; Wednesday Nov 25, End Of Day</span></div>
+      <h3>Final Step: <span>Paper Acceptance</span></h3>
+      <p>Once every item above is reviewed and given its status, the acceptance is signed on paper at Wednesday&rsquo;s sign-off &mdash; it mirrors this checklist item for item.</p>
+      <div><span class="due">$450 Delivery Balance Due At Wednesday&rsquo;s Sign-Off &middot; Nov 25, End Of Day</span></div>
     </section>
 
   </section>
@@ -853,7 +910,7 @@
         <h3><span class="gap-num">1</span><span>The One Gap &mdash; The Connection</span></h3>
         <p>Outstand is the service that actually sends your posts to Facebook, LinkedIn, and Instagram. Claude connects to it through a standard plug called MCP.</p>
         <p>When we tried to connect it last night, the sign-in worked but the handshake failed three times. The most likely cause: the operator&rsquo;s Outstand login isn&rsquo;t a member of your Outstand organization yet, so the connector can&rsquo;t see your three accounts.</p>
-        <p class="fix"><strong>Today&rsquo;s first job is a two-minute fix:</strong> you invite the operator into your organization, we reconnect, and we prove it live.</p>
+        <p class="fix"><strong>Today&rsquo;s first check:</strong> you invite the operator into your organization, we reconnect, and we prove it live.</p>
       </article>
 
       <article class="gap-card">
@@ -937,7 +994,27 @@
         </div>
       </div>
 
-      <div class="footer-note"><strong>One Thing To Be Clear On:</strong> the connection fix on today&rsquo;s agenda is about the MCP handshake, for the caption drafts &mdash; not about booking. Booking already works.</div>
+      <article class="card">
+        <h3>Connection Fix Order</h3>
+        <p>Test Each Step In Order And Stop At The First That Works.</p>
+        <ul class="prove-list">
+          <li><span class="prove-num">1</span><span>In the chat, turn the connector on: &ldquo;+&rdquo; then Connectors then the Outstand toggle.</span></li>
+          <li><span class="prove-num">2</span><span>Check Outstand&rsquo;s plan is active in Armand&rsquo;s Outstand dashboard &mdash; Outstand answers &ldquo;402 Payment Required&rdquo; without an active subscription.</span></li>
+          <li><span class="prove-num">3</span><span>Check the organization picked at sign-in is the one holding the three accounts &mdash; the connector only has access to the organization you approved; to change it, remove and re-add the connector.</span></li>
+          <li><span class="prove-num">4</span><span>Remove the connector in Customize then Connectors, reconnect, sign in once.</span></li>
+          <li><span class="prove-num">5</span><span>Ask Outstand support with the exact error text.</span></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Operator Notes</h3>
+        <p>An operator decision, not a client-facing step:</p>
+        <ul class="prove-list">
+          <li><span class="prove-num">5</span><span>Still failing after the steps above: the Owner re-adds it in Organization settings then Connectors with the API key as a request header (Authorization: Bearer) instead of OAuth &mdash; the key stays in the admin setting, never in a chat; everyone on the Team then shares that one credential.</span></li>
+        </ul>
+      </article>
+
+      <div class="footer-note"><strong>One Thing To Be Clear On:</strong> the connection fix on today&rsquo;s agenda is about the MCP handshake &mdash; it is what lets Claude draft captions and read post state. Booking runs separately: the Sheet&rsquo;s script books through Outstand&rsquo;s API, and booking was proven by this morning&rsquo;s test. Publishing is proven today.</div>
     </div>
   </section>
 
@@ -974,14 +1051,14 @@
           <span class="step-num">4</span>
           <div>
             <h3>The Script Books It</h3>
-            <p>Approved posts book automatically to Facebook, LinkedIn, and Instagram. No hand-posting.</p>
+            <p>When you approve a post, the script books it to Facebook, LinkedIn, and Instagram. Approved posts publish automatically through Outstand.</p>
           </div>
         </article>
         <article class="step-card">
           <span class="step-num">5</span>
           <div>
-            <h3>Everything Files Itself</h3>
-            <p>Posted photos move to Posted, then Archive. The Sheet keeps the record.</p>
+            <h3>Booked Rows File To Ready To Post</h3>
+            <p>After booking, the sweeps file booked rows to Ready To Post. Posted photos then move to Posted and Archive, and the Sheet keeps the record.</p>
           </div>
         </article>
       </div>
@@ -1068,6 +1145,7 @@
             <a class="btn btn-dark variant-btn" href="https://www.canva.com/design/DAHby9w7qoc/edit" target="_blank" rel="noopener">Equipment A</a>
             <a class="btn btn-ghost variant-btn" href="https://www.canva.com/design/DAHby8vdO8Q/edit" target="_blank" rel="noopener">Equipment B</a>
           </div>
+          <p class="open-items"><strong>Equipment A &mdash; Held: Photo Redo Pending.</strong> Its current photo is a reconstruction, not the crew&rsquo;s work.</p>
         </article>
         <article class="bucket-card">
           <h3>Rooftop</h3>
