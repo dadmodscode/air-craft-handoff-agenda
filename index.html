@@ -1229,7 +1229,51 @@
   });
 
   var boxes = document.querySelectorAll('[data-review]');
+  var selects = document.querySelectorAll('.status-select');
   var countEl = document.getElementById('reviewedCount');
+  var STORAGE_KEY = 'air-craft-handoff-checklist-v1';
+  function delivId(el){
+    var card = el.closest('.deliv');
+    return card ? card.id : '';
+  }
+  function saveState(){
+    try{
+      var state = { checks:{}, statuses:{} };
+      boxes.forEach(function(b){
+        var id = delivId(b);
+        if(id) state.checks[id] = !!b.checked;
+      });
+      selects.forEach(function(s){
+        var id = delivId(s);
+        if(id) state.statuses[id] = s.value;
+      });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }catch(e){}
+  }
+  function restoreState(){
+    try{
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if(!raw) return;
+      var state = JSON.parse(raw);
+      if(!state) return;
+      if(state.checks){
+        boxes.forEach(function(b){
+          var id = delivId(b);
+          if(id && Object.prototype.hasOwnProperty.call(state.checks, id)){
+            b.checked = !!state.checks[id];
+          }
+        });
+      }
+      if(state.statuses){
+        selects.forEach(function(s){
+          var id = delivId(s);
+          if(id && Object.prototype.hasOwnProperty.call(state.statuses, id)){
+            s.value = state.statuses[id];
+          }
+        });
+      }
+    }catch(e){}
+  }
   function refresh(){
     var n = 0;
     boxes.forEach(function(b){
@@ -1239,7 +1283,9 @@
     });
     if(countEl) countEl.textContent = String(n);
   }
-  boxes.forEach(function(b){ b.addEventListener('change', refresh); });
+  boxes.forEach(function(b){ b.addEventListener('change', function(){ refresh(); saveState(); }); });
+  selects.forEach(function(s){ s.addEventListener('change', saveState); });
+  restoreState();
   refresh();
 })();
 </script>
